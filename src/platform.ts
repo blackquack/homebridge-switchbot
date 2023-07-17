@@ -2154,9 +2154,10 @@ export class SwitchBotPlatform implements DynamicPlatformPlugin {
       queueScheduler.schedule(() =>
         switchbot = new Switchbot(),
       );
+      this.debugLog(`Was 'node-switchbot' found: ${switchbot}, debug`);
     } catch (e: any) {
       switchbot = false;
-      this.errorLog(`Was 'node-switchbot' found: ${switchbot}`);
+      this.errorLog(`Was 'node-switchbot' found: ${switchbot}, error`);
     }
     return switchbot;
   }
